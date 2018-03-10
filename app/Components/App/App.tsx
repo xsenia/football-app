@@ -11,10 +11,10 @@ export class App extends React.Component {
         return(
             <thead>
                 {headers.map((head, i) =>
-                    <th>{head}</th>
+                    <th>{head}</th> 
                 )}
             </thead>
-        ); 
+        );
     }
 
     render(): JSX.Element {
