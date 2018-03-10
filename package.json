@@ -1,0 +1,37 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "npm": "^5.7.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
+    "webpack": "^3.11.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.0.38",
+    "@types/react-dom": "^16.0.4",
+    "@types/react-redux": "^5.0.15",
+    "@types/redux-actions": "^2.2.4",
+    "autoprefixer": "^8.0.0",
+    "css-loader": "^0.28.9",
+    "redux-actions": "^2.2.1",
+    "redux-thunk": "^2.2.0",
+    "redux-thunk-actions": "^1.1.6",
+    "reselect": "^3.0.1",
+    "style-loader": "^0.20.2",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "ts-loader": "^3.5.0",
+    "typescript": "^2.6.2",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --inline --content-base public/ --port 3333 --host 0.0.0.0"
+  },
+  "author": "aa",
+  "license": "ISC"
+}
