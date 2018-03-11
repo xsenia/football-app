@@ -321,7 +321,7 @@ export const data = [
             "home": {"win": 7, "draw": 4, "lose": 3, "total": "lwwdwwwdlwldwd"},
             "away": {"win": 4, "draw": 3, "lose": 7, "total": "ddwlldwllwlllw"}
         }
-    }, {
+    }/*, {
         "eventInfo": {"date": "24.01.2018", "leagueId": 2},
         "info": {"home": "Дармштадт 98", "away": "Кайзерслаутерн", "score": "3-1"},
         "results": {
@@ -1319,5 +1319,5 @@ export const data = [
             "home": {"win": 1, "draw": 1, "lose": 5, "total": "lllwdll"},
             "away": {"win": 2, "draw": 5, "lose": 5, "total": "ddllldwlwdld"}
         }
-    }
+    }*/
 ];
