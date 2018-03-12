@@ -12,44 +12,67 @@ export class App extends React.Component {
 
     private renderHeader(): JSX.Element {
         return(
-            <tr>
-                {headers.map((head, i) =>
-                    <th key={i}>{head}</th>
-                )}
-            </tr>
+            <thead>
+                <tr>
+                    <th>Дата</th>
+                    <th>Лига</th>
+                    <th>Команды</th>
+                    <th>Счет</th>
+                    <th>Результ игры</th>
+                    <th>Домашняя команда - очки</th>
+                    <th>Домашняя команда - форма</th>
+                    <th>Гостевая команда - очки</th>
+                    <th>Гостевая команда - форма</th>
+                </tr>
+            </thead>
         );
     }
 
     private renderBody(): JSX.Element {
-
-            {tableInfo.map( (row:any, i:number) =>
-                {
+        return(
+            <tbody>
+                {tableInfo.map((elem:any, i:number) => {
+                    console.log(elem);
                     return (
                         <tr key={i}>
-                            {row.map( (cell:any, i:number) =>
-                                {
-                                    return (
-                                        <td key={i}>
-                                            {cell}
-                                        </td>
-                                    )
-                                }
-                            )}
+                            <td>{elem.date}</td>
+                            <td>{elem.ligue}</td>
+                            <td>{elem.teamHome} - {elem.teamAway}</td>
+                            <td>{elem.score}</td>
+                            <td>{elem.resultWord}</td>
+                            <td>{elem.homeW}-{elem.homeD}-{elem.homeL}</td>
+                            <td>{elem.homeTotal}</td>
+                            <td>{elem.awayW}-{elem.awayD}-{elem.awayL}</td>
+                            <td>{elem.awayTotal}</td>
                         </tr>
                     )
-                }
-            }
+                })}
+            </tbody>
         );
     }
+
+/*    private renderBody(): JSX.Element {
+        return(
+            <tr>
+                {tableInfo.map((elem:any, i:number) => {
+                    console.log(elem);
+                    return (
+                        <div key={i}>{elem.teamHome}</div>
+                    )
+
+                })}
+            </tr>
+        );
+    }*/
+
 
     render(): JSX.Element {
         return(
             <div>
                 <table>
-                    <tbody>
-                        {this.renderHeader()}
-                        {this.renderBody()}
-                    </tbody>
+                    {this.renderHeader()}
+                    {this.renderBody()}
+
                 </table>
             </div>
         )
