@@ -6,7 +6,7 @@ export class App extends React.Component {
     constructor(props: any, state: any){
         super(props, state);
         this.state = {
-            /*games: tableInfo*/
+            games: tableInfo
         };
     }
 
@@ -32,7 +32,6 @@ export class App extends React.Component {
         return(
             <tbody>
                 {tableInfo.map((elem:any, i:number) => {
-                    console.log(elem);
                     return (
                         <tr key={i}>
                             <td>{elem.date}</td>
@@ -40,9 +39,17 @@ export class App extends React.Component {
                             <td>{elem.teamHome} - {elem.teamAway}</td>
                             <td>{elem.score}</td>
                             <td>{elem.resultWord}</td>
-                            <td>{elem.homeW}-{elem.homeD}-{elem.homeL}</td>
+                            <td>
+                                <span className="win">{elem.homeW}</span> -
+                                <span className="draw">{elem.homeD}</span> -
+                                <span className="lose">{elem.homeL}</span>
+                            </td>
                             <td>{elem.homeTotal}</td>
-                            <td>{elem.awayW}-{elem.awayD}-{elem.awayL}</td>
+                            <td>
+                                <span className="win">{elem.awayW}</span> -
+                                <span className="draw">{elem.awayD}</span> -
+                                <span className="lose">{elem.awayL}</span>
+                            </td>
                             <td>{elem.awayTotal}</td>
                         </tr>
                     )
@@ -51,25 +58,12 @@ export class App extends React.Component {
         );
     }
 
-/*    private renderBody(): JSX.Element {
-        return(
-            <tr>
-                {tableInfo.map((elem:any, i:number) => {
-                    console.log(elem);
-                    return (
-                        <div key={i}>{elem.teamHome}</div>
-                    )
-
-                })}
-            </tr>
-        );
-    }*/
 
 
     render(): JSX.Element {
         return(
             <div>
-                <table>
+                <table className="table">
                     {this.renderHeader()}
                     {this.renderBody()}
 

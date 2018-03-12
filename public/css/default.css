@@ -5,3 +5,24 @@
 *{
     box-sizing: border-box;
 }
+.table {
+    border-collapse: collapse;
+}
+.table th,
+.table td {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+.table th {
+    font-size: 14px;
+}
+
+.win {
+    color: green;
+}
+.draw {
+    color: yellow;
+}
+.lose {
+    color: red;
+}
