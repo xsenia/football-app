@@ -1,6 +1,19 @@
 import {data, leagues} from "./Data";
 
 const dataClone = JSON.parse(JSON.stringify(data));
+
+const getResultWord = (score:any) => {
+    const scoreWord = score;
+    let scoreArr = scoreWord.split('-');
+    if (Number(scoreArr[0]) == Number(scoreArr[1])) {
+        return('Ничья');
+    } else if (Number(scoreArr[0]) > Number(scoreArr[1])) {
+        return('Победа');
+    } else {
+        return('Поражение');
+    }
+}
+
 export const tableInfo = dataClone.map((game: any, i: number) =>
     {
         return (
@@ -11,7 +24,7 @@ export const tableInfo = dataClone.map((game: any, i: number) =>
                 "teamHome": game.info.home,
                 "teamAway": game.info.away,
                 "score": game.info.score,
-                "resultWord": "win/draw/lose",
+                "resultWord": getResultWord(game.info.score),
                 "homeW": game.results.home.win,
                 "homeD": game.results.home.draw,
                 "homeL": game.results.home.lose,
@@ -24,4 +37,6 @@ export const tableInfo = dataClone.map((game: any, i: number) =>
         )
     }
 );
+
+
 

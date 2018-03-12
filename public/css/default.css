@@ -16,13 +16,36 @@
 .table th {
     font-size: 14px;
 }
-
+.w-d-l span {
+    display: inline-block;
+    width: 20px;
+    padding: 2px;
+    border-radius: 3px;
+    text-align: center;
+    background-color: #000;
+}
 .win {
-    color: green;
+    color: #77f777;
 }
 .draw {
     color: yellow;
 }
 .lose {
-    color: red;
+    color: #ff2323;
+}
+.total span {
+    display: inline-block;
+    width: 20px;
+    padding: 2px;
+    border-radius: 3px;
+    text-align: center;
+}
+span.w {
+    background-color: #5aca07;
+}
+span.d {
+    background-color: #f4f71a;
+}
+span.l {
+    background-color: #e63131;
 }
