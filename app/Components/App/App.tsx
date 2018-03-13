@@ -2,6 +2,7 @@ import * as React from "react";
 import {headers} from "../../Helpers/Data";
 import {tableInfo} from "../../Helpers/getData";
 import {Filter} from "./Filter";
+import {Table} from "./Table";
 
 export class App extends React.Component {
     constructor(props: any, state: any){
@@ -81,6 +82,9 @@ export class App extends React.Component {
             <div className="app-wrap">
                 <Filter
                     title="Фильтр"
+                />
+                <Table
+
                 />
                 <table className="table">
                     {this.renderHeader()}

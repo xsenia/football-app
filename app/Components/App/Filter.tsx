@@ -5,24 +5,29 @@ interface AppProps {
     title?: string;
 }
 
-    export class Filter extends React.Component<AppProps, {value: string}> {
+    export class Filter extends React.Component<AppProps, {valueSelect:string, valueTeamsName:string}> {
     constructor(props: any, state: any){
         super(props, state);
-        console.log(props);
         this.state = {
-            value: undefined
+            valueSelect: undefined,
+            valueTeamsName: undefined
         };
 
-        this.handleChange = this.handleChange.bind(this);
+        this.handleChangeSelect = this.handleChangeSelect.bind(this);
+        this.handleChangeTeamsName = this.handleChangeTeamsName.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    private handleChange(event:any) {
-        this.setState({value: event.target.value});
+    private handleChangeSelect(event:any) {
+        this.setState({valueSelect: event.target.value});
     }
 
+    private handleChangeTeamsName(event:any) {
+            this.setState({valueTeamsName: event.target.value});
+        }
+
     private handleSubmit(event:any) {
-        alert('Вы выбрали лигу: ' + this.state.value);
+        alert('Вы выбрали команду: ' + this.state.valueTeamsName + 'Вы выбрали лигу: ' + this.state.valueSelect);
         event.preventDefault();
     }
 
@@ -39,13 +44,13 @@ interface AppProps {
                             id="teamName"
                             placeholder="Название команды"
                             type="text"
-                            value={this.state.value}
-                            onChange={this.handleChange}
+                            value={this.state.valueTeamsName}
+                            onChange={this.handleChangeTeamsName}
                         />
                     </div>
                     <div className="row">
                         <label htmlFor="leaguesName">Название лиги</label>
-                        <select id="leaguesName" value={this.state.value} onChange={this.handleChange}>
+                        <select id="leaguesName" value={this.state.valueSelect} onChange={this.handleChangeSelect}>
                             {leaguesList.map((name:string, i:number) => {
                                 return (
                                     <option key={i} value={name}>{name}</option>
