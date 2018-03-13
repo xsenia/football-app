@@ -5,6 +5,21 @@
 *{
     box-sizing: border-box;
 }
+
+.app-wrap {
+    padding: 20px;
+}
+.filter-wrap {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color:#38ed85;
+}
+h2 {
+    margin:0 0 20px;
+    color: #fff;
+}
+
+
 .table {
     border-collapse: collapse;
 }

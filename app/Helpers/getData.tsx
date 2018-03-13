@@ -15,7 +15,7 @@ const getResultWord = (score:any) => {
 }
 
 const leaguesClone = JSON.parse(JSON.stringify(leagues));
-export const leaguesList = leaguesClone.map((leagues) => {
+export const leaguesList = leaguesClone.map((leagues:any) => {
     return leagues.name;
 });
 

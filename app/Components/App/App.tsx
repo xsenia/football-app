@@ -78,9 +78,9 @@ export class App extends React.Component {
 
     render(): JSX.Element {
         return(
-            <div>
+            <div className="app-wrap">
                 <Filter
-                    title="Фильтры"
+                    title="Фильтр"
                 />
                 <table className="table">
                     {this.renderHeader()}
