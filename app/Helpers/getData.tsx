@@ -1,6 +1,6 @@
 import {data, leagues} from "./Data";
 
-const dataClone = JSON.parse(JSON.stringify(data));
+
 
 const getResultWord = (score:any) => {
     const scoreWord = score;
@@ -14,6 +14,13 @@ const getResultWord = (score:any) => {
     }
 }
 
+const leaguesClone = JSON.parse(JSON.stringify(leagues));
+export const leaguesList = leaguesClone.map((leagues) => {
+    return leagues.name;
+});
+
+
+const dataClone = JSON.parse(JSON.stringify(data));
 export const tableInfo = dataClone.map((game: any, i: number) =>
     {
         return (

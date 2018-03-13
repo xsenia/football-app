@@ -39,6 +39,7 @@
     padding: 2px;
     border-radius: 3px;
     text-align: center;
+    margin-right: 1px;
 }
 span.w {
     background-color: #5aca07;
