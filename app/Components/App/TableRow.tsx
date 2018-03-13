@@ -1,25 +1,7 @@
 import * as React from "react";
 import {tableInfo} from "../../Helpers/getData";
 
-export class Table extends React.Component<{}, {}> {
-
-    private renderHeader(): JSX.Element {
-        return(
-            <thead>
-            <tr>
-                <th>Дата</th>
-                <th>Лига</th>
-                <th>Команды</th>
-                <th>Счет</th>
-                <th>Результ игры</th>
-                <th>Домашняя команда - очки</th>
-                <th>Домашняя команда - форма</th>
-                <th>Гостевая команда - очки</th>
-                <th>Гостевая команда - форма</th>
-            </tr>
-            </thead>
-        );
-    }
+export class TableRow extends React.Component<{}, {}> {
 
     private getWDL(str:string) {
         let wdl = str.split('');
@@ -32,7 +14,8 @@ export class Table extends React.Component<{}, {}> {
         return(wdlMap);
     }
 
-    private renderBody(): JSX.Element {
+
+    render(): JSX.Element {
         return(
             <tbody>
             {tableInfo.map((elem:any, i:number) => {
@@ -63,17 +46,6 @@ export class Table extends React.Component<{}, {}> {
                 )
             })}
             </tbody>
-        );
-    }
-
-    render(): JSX.Element {
-        return (
-            <div>
-                <table className="table">
-                    {this.renderHeader()}
-                    {this.renderBody()}
-                </table>
-            </div>
         );
     }
 }

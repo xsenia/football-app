@@ -1,14 +1,14 @@
 import * as React from "react";
-import {headers} from "../../Helpers/Data";
-
+import {tableInfo} from "../../Helpers/getData";
 import {Filter} from "./Filter";
-import {Table} from "./Table";
+import {TableRow} from "./TableRow";
+import {TableHeader} from "./TableHeader";
 
 export class App extends React.Component {
     constructor(props: any, state: any){
         super(props, state);
         this.state = {
-            //games: tableInfo
+            games: tableInfo
         };
     }
 
@@ -22,7 +22,10 @@ export class App extends React.Component {
                 <Filter
                     title="Фильтр"
                 />
-                <Table  />
+                <table className="table">
+                    <TableHeader />
+                    <TableRow />
+                </table>
             </div>
         )
     }
