@@ -10,6 +10,7 @@ export class App extends React.Component {
         this.state = {
             games: tableInfo
         };
+
     }
 
 
@@ -24,7 +25,9 @@ export class App extends React.Component {
                 />
                 <table className="table">
                     <TableHeader />
-                    <TableRow />
+                    <TableRow
+                        tableInfo={tableInfo}
+                    />
                 </table>
             </div>
         )

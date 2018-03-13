@@ -25,10 +25,8 @@ export const leaguesList = leaguesClone.map((leagues:any) => {
 
 const getLeagueId = (id:number) => {
     const leaguesClone = JSON.parse(JSON.stringify(leagues));
-    //const row = find(leaguesClone, id);
     const index = leaguesClone.findIndex((leaguesClone:any) => leaguesClone.id === id);
     const name = leaguesClone[index].name;
-    console.log('--',name);
     return name;
 };
 

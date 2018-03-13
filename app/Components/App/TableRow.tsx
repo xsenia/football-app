@@ -1,7 +1,10 @@
 import * as React from "react";
-import {tableInfo} from "../../Helpers/getData";
 
-export class TableRow extends React.Component<{}, {}> {
+interface AppProps {
+    tableInfo: any;
+}
+
+export class TableRow extends React.Component<AppProps, {}> {
 
     private getWDL(str:string) {
         let wdl = str.split('');
@@ -18,7 +21,7 @@ export class TableRow extends React.Component<{}, {}> {
     render(): JSX.Element {
         return(
             <tbody>
-            {tableInfo.map((elem:any, i:number) => {
+            {this.props.tableInfo.map((elem:any, i:number) => {
                 return (
                     <tr key={i}>
                         <td>{elem.date}</td>
