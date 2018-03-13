@@ -15,18 +15,32 @@ const getResultWord = (score:any) => {
 }
 
 const leaguesClone = JSON.parse(JSON.stringify(leagues));
+const dataClone = JSON.parse(JSON.stringify(data));
+
+
 export const leaguesList = leaguesClone.map((leagues:any) => {
     return leagues.name;
 });
 
 
-const dataClone = JSON.parse(JSON.stringify(data));
+const getLeagueId = (id:number) => {
+    const leaguesClone = JSON.parse(JSON.stringify(leagues));
+    //const row = find(leaguesClone, id);
+    const index = leaguesClone.findIndex((leaguesClone:any) => leaguesClone.id === id);
+    const name = leaguesClone[index].name;
+    console.log('--',name);
+    return name;
+};
+
+
+
 export const tableInfo = dataClone.map((game: any, i: number) =>
     {
         return (
             {
                 "gameId": i,
-                "ligue": game.eventInfo.leagueId,
+                //"ligue": game.eventInfo.leagueId,
+                "ligue": getLeagueId(game.eventInfo.leagueId),
                 "date": game.eventInfo.date,
                 "teamHome": game.info.home,
                 "teamAway": game.info.away,
