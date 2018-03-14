@@ -37,7 +37,6 @@ export const tableInfo = dataClone.map((game: any, i: number) =>
         return (
             {
                 "gameId": i,
-                //"ligue": game.eventInfo.leagueId,
                 "ligue": getLeagueId(game.eventInfo.leagueId),
                 "date": game.eventInfo.date,
                 "teamHome": game.info.home,
@@ -56,6 +55,12 @@ export const tableInfo = dataClone.map((game: any, i: number) =>
         )
     }
 );
+/*console.log(tableInfo);
+const compareAge = (objA:any, objB:any) => {
+    return objA.ligue - objB.ligue;
+}
+tableInfo.sort(this.compareAge);
+console.log(tableInfo);*/
 
 
 

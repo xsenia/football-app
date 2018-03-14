@@ -1,5 +1,6 @@
 import * as React from "react";
 import {leaguesList} from "../../Helpers/getData";
+import {Filters} from "../../Helpers/Filters";
 
 interface AppProps {
     title?: string;
@@ -23,8 +24,9 @@ interface AppProps {
     }
 
     private handleChangeTeamsName(event:any) {
-            this.setState({valueTeamsName: event.target.value});
-        }
+        this.setState({valueTeamsName: event.target.value});
+        console.log(Filters);
+    }
 
     private handleSubmit(event:any) {
         alert('Вы выбрали команду: ' + this.state.valueTeamsName + 'Вы выбрали лигу: ' + this.state.valueSelect);

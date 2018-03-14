@@ -1,12 +1,21 @@
 import * as React from "react";
 
-export class TableHeader extends React.Component<{}, {}> {
+interface AppProps {
+    sortBy: any;
+}
+
+export class TableHeader extends React.Component<AppProps, {}> {
     render(): JSX.Element {
         return(
             <thead>
             <tr>
                 <th>Дата</th>
-                <th>Лига</th>
+                <th>
+                    Команды
+                    <button
+                        onClick={() => this.props.sortBy('gameId')}
+                    >Сортировка</button>
+                </th>
                 <th>Команды</th>
                 <th>Счет</th>
                 <th>Результ игры</th>
