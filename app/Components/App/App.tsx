@@ -10,7 +10,7 @@ export class App extends React.Component<{}, {table:any}> {
         this.state = {
             table: tableInfo
         };
-        console.log(this.state);
+        //console.log(this.state);
     }
 
 
@@ -31,6 +31,7 @@ export class App extends React.Component<{}, {table:any}> {
             <div className="app-wrap">
                 <Filter
                     title="Фильтр"
+                    table={this.state.table}
                 />
                 <table className="table">
                     <TableHeader
