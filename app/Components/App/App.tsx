@@ -4,13 +4,14 @@ import {Filter} from "./Filter";
 import {TableRow} from "./TableRow";
 import {TableHeader} from "./TableHeader";
 
+
 export class App extends React.Component<{}, {table:any}> {
     constructor(props: any, state: any){
         super(props, state);
         this.state = {
             table: tableInfo
         };
-        //console.log(this.state);
+
     }
 
 
@@ -23,22 +24,26 @@ export class App extends React.Component<{}, {table:any}> {
         this.setState({table: tableSort}, () => console.log(this.state));*/
     }
 
-
+    private updateState = (ft:any) => {
+        this.setState({table: ft});
+    }
 
 
     render(): JSX.Element {
+        console.log(this.state.table);
         return(
             <div className="app-wrap">
                 <Filter
                     title="Фильтр"
                     table={this.state.table}
+                    update={this.updateState}
                 />
                 <table className="table">
                     <TableHeader
                         sortBy={this.sortBy}
                     />
                     <TableRow
-                        tableInfo={tableInfo}
+                        tableInfo={this.state.table}
                     />
                 </table>
             </div>

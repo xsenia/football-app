@@ -1,10 +1,12 @@
 import * as React from "react";
 import {leaguesList} from "../../Helpers/getData";
 import {FiltersHandler} from "../../Helpers/FiltersHandler";
+import {tableInfo} from "../../Helpers/getData";
 
 interface AppProps {
     title?: string;
-    table: any
+    table: any,
+    update: any
 }
 
     export class Filter extends React.Component<AppProps, {valueSelect:string, valueTeamsName:string}> {
@@ -14,27 +16,27 @@ interface AppProps {
             valueSelect: undefined,
             valueTeamsName: undefined
         };
-        this.handleChangeSelect = this.handleChangeSelect.bind(this);
-        this.handleChangeTeamsName = this.handleChangeTeamsName.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    private handleSubmit(event:any) {
+    private handleSubmit = (event:any) => {
         event.preventDefault();
         let valueSelect : string = this.state.valueSelect;
         let valueTeamsName : string = this.state.valueTeamsName;
-        let table = this.props.table;
-        let setValue = {valueSelect, valueTeamsName, table};
-        FiltersHandler.filterIt(setValue);
-        //alert('Вы выбрали команду: ' + this.state.valueTeamsName + 'Вы выбрали лигу: ' + this.state.valueSelect);
-
+        let table : any  = tableInfo;
+        let setValue = {table, valueSelect, valueTeamsName};
+        let filterTable = FiltersHandler.filterIt(setValue);
+        this.getFilterTable(filterTable);
     }
 
-    private handleChangeSelect(event:any) {
+    private getFilterTable = (ft:any) => {
+        this.props.update(ft);
+    }
+
+    private handleChangeSelect = (event:any) => {
         this.setState({valueSelect: event.target.value});
     }
 
-    private handleChangeTeamsName(event:any) {
+    private handleChangeTeamsName = (event:any) => {
         this.setState({valueTeamsName: event.target.value});
     }
 
