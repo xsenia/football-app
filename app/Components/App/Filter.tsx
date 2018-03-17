@@ -22,8 +22,7 @@ interface AppProps {
         event.preventDefault();
         let valueSelect : string = this.state.valueSelect;
         let valueTeamsName : string = this.state.valueTeamsName;
-        let table : any  = tableInfo;
-        let setValue = {table, valueSelect, valueTeamsName};
+        let setValue = {tableInfo, valueSelect, valueTeamsName};
         let filterTable = FiltersHandler.filterIt(setValue);
         this.getFilterTable(filterTable);
     }
