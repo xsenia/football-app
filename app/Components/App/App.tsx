@@ -30,7 +30,7 @@ export class App extends React.Component<{}, {table:any}> {
 
 
     render(): JSX.Element {
-        console.log(this.state.table);
+        console.log('this.state.table ',this.state.table);
         return(
             <div className="app-wrap">
                 <Filter
