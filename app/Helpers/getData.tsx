@@ -18,9 +18,11 @@ const leaguesClone = JSON.parse(JSON.stringify(leagues));
 const dataClone = JSON.parse(JSON.stringify(data));
 
 
-export const leaguesList = leaguesClone.map((leagues:any) => {
+export let leaguesList = leaguesClone.map((leagues:any) => {
     return leagues.name;
 });
+leaguesList.unshift("Выберите лигу");
+
 
 
 const getLeagueId = (id:number) => {

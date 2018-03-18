@@ -47,10 +47,10 @@ interface AppProps {
                 <h2>{this.props.title}</h2>
                 <form onSubmit={this.handleSubmit}>
                     <div className="row">
-                        <label>Название команды</label>
+                        <label>Название домашней команды</label>
                         <input
                             id="teamName"
-                            placeholder="Название команды"
+                            placeholder="Название домашней команды"
                             type="text"
                             value={this.state.valueTeamsName}
                             onChange={this.handleChangeTeamsName}
@@ -58,10 +58,17 @@ interface AppProps {
                     </div>
                     <div className="row">
                         <label>Название лиги</label>
-                        <select id="leaguesName" defaultValue={this.state.valueSelect} onChange={this.handleChangeSelect}>
+                        <select
+                            id="leaguesName"
+                            defaultValue={this.state.valueSelect}
+                            onChange={this.handleChangeSelect}
+                        >
                             {leaguesList.map((name:string, i:number) => {
                                 return (
-                                    <option key={i} value={name}>{name}</option>
+                                    <option
+                                        key={i}
+                                        value={name}>{name}
+                                    </option>
                                 );
                             })}
                         </select>
