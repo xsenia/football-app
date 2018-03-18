@@ -9,12 +9,17 @@ interface AppProps {
     update: any
 }
 
-    export class Filter extends React.Component<AppProps, {valueSelect:string, valueTeamsName:string}> {
+    export class Filter extends React.Component<AppProps, {valueSelect:string, valueTeamsName:string,radioGroup:{win: boolean,draw: boolean,lose: boolean}}> {
     constructor(props: any, state: any){
         super(props, state);
         this.state = {
             valueSelect: undefined,
-            valueTeamsName: undefined
+            valueTeamsName: undefined,
+            radioGroup: {
+                win: false,
+                draw: false,
+                lose: false
+            }
         };
     }
 
@@ -22,7 +27,8 @@ interface AppProps {
         event.preventDefault();
         let valueSelect : string = this.state.valueSelect;
         let valueTeamsName : string = this.state.valueTeamsName;
-        let setValue = {tableInfo, valueSelect, valueTeamsName};
+        let valueRadio : any = Object.keys(this.state.radioGroup);
+        let setValue = {tableInfo, valueSelect, valueTeamsName, valueRadio};
         let filterTable = FiltersHandler.filterIt(setValue);
         this.getFilterTable(filterTable);
     }
@@ -37,6 +43,13 @@ interface AppProps {
 
     private handleChangeTeamsName = (event:any) => {
         this.setState({valueTeamsName: event.target.value});
+    }
+
+    private handleRadio = (event:any) => {
+        let stateGroup:any = {};
+        stateGroup[event.target.value] = event.target.checked;
+        console.log('stateGroup',stateGroup);
+        this.setState({radioGroup: stateGroup},() => {console.log(this.state);});
     }
 
 
@@ -73,7 +86,30 @@ interface AppProps {
                             })}
                         </select>
                     </div>
-                    <input type="submit" value="Submit" />
+                    <div className="row">
+                        <label>Победа
+                        <input
+                            type="radio"
+                            value="win"
+                            checked={this.state.radioGroup.win}
+                            onChange={this.handleRadio}
+                        /></label>
+                        <label>Ничья
+                        <input
+                            type="radio"
+                            value="draw"
+                            checked={this.state.radioGroup.draw}
+                            onChange={this.handleRadio}
+                        /></label>
+                        <label>Поражение
+                        <input
+                            type="radio"
+                            value="lose"
+                            checked={this.state.radioGroup.lose}
+                            onChange={this.handleRadio}
+                        /></label>
+                    </div>
+                    <input type="submit" value="Показать" />
                 </form>
             </div>
         );
