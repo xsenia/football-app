@@ -86,30 +86,50 @@ interface AppProps {
                             })}
                         </select>
                     </div>
-                    <div className="row">
-                        <label>Победа
+                    <div className="b-radio">
                         <input
+                            id="radio1"
+                            className="radio"
                             type="radio"
                             value="win"
                             checked={this.state.radioGroup.win}
                             onChange={this.handleRadio}
-                        /></label>
-                        <label>Ничья
+                        />
+                        <label htmlFor="radio1">
+                            Победа
+                        </label>
+
                         <input
+                            id="radio2"
+                            className="radio"
                             type="radio"
                             value="draw"
                             checked={this.state.radioGroup.draw}
                             onChange={this.handleRadio}
-                        /></label>
-                        <label>Поражение
+                        />
+                        <label htmlFor="radio2">
+                            Ничья
+                        </label>
+
                         <input
+                            id="radio3"
+                            className="radio"
                             type="radio"
                             value="lose"
                             checked={this.state.radioGroup.lose}
                             onChange={this.handleRadio}
-                        /></label>
+                        />
+                        <label htmlFor="radio3">
+                            Поражение
+                        </label>
                     </div>
-                    <input type="submit" value="Показать" />
+                    <div className="btn-row">
+                        <input
+                            type="submit"
+                            className="btn"
+                            value="Показать"
+                        />
+                    </div>
                 </form>
             </div>
         );
