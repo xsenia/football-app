@@ -15,13 +15,19 @@ export class App extends React.Component<{}, {table:any}> {
     }
 
 
-    private sortBy = (key:any) => {
-        alert(key);
-        /*const keySort = key;
+    private sortByDecreasing = (sortKey:any) => {
         let tableSort:any = tableInfo.sort((objA: any, objB: any) => {
-            return objA[keySort] > objB[keySort];
+            if (objA[sortKey] < objB[sortKey]) return 1;
+            if (objA[sortKey] > objB[sortKey]) return -1;
+            return 0;
         });
-        this.setState({table: tableSort}, () => console.log(this.state));*/
+        this.setState({table: tableSort}, () => console.log(this.state));
+    }
+    private sortByIncreasing = (sortKey:any) => {
+        let tableSort:any = tableInfo.sort((objA: any, objB: any) => {
+            return (objA[sortKey] < objB[sortKey]) ? -1 : (objA[sortKey] > objB[sortKey]) ? 1 : 0;
+        });
+        this.setState({table: tableSort}, () => console.log(this.state));
     }
 
     private updateState = (ft:any) => {
@@ -40,7 +46,8 @@ export class App extends React.Component<{}, {table:any}> {
                 />
                 <table className="table">
                     <TableHeader
-                        sortBy={this.sortBy}
+                        sortByDecreasing={this.sortByDecreasing}
+                        sortByIncreasing={this.sortByIncreasing}
                     />
                     <TableRow
                         tableInfo={this.state.table}
