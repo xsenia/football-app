@@ -152,33 +152,40 @@ h2 {
 }
 
 /*-------------------------строка поиска-------------------*/
+.b-search {
+    position: relative;
+}
 .b-search ul {
+    position: absolute;
+    z-index: 10;
     list-style: none;
     display: inline-block;
-    width: 420px;
+    width: auto;
     text-align: left;
+    padding: 0;
+    max-height: 400px;
+    overflow: scroll;
 }
 
 .b-search ul li {
     display: block;
-    padding: 15px 20px;
+    padding: 5px 10px;
     background-color: #F8F8F8;
     color: #7B8585;
-    margin-bottom: 3px;
+    margin-bottom: 0px;
     position: relative;
     transition: 0.3s;
 }
 
-.b-search ul li a {
-    position: absolute;
-    left: 160px;
-    font-size: 12px;
-    line-height: 16px;
-    color: #969d9d;
-}
-
 .b-search ul li:hover {
     background-color:#d8f2f1;
+}
+
+.b-search ul.invisibleList {
+    display: none;
+}
+.b-search ul.visibleList {
+    display: block;
 }
 
 
