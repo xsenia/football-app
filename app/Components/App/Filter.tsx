@@ -9,7 +9,7 @@ interface AppProps {
     update: any
 }
 
-    export class Filter extends React.Component<AppProps, {valueSelect:string, valueTeamsName:string,radioGroup:{win: boolean,draw: boolean,lose: boolean}}> {
+    export class Filter extends React.Component<AppProps, {valueSelect:string, valueTeamsName:string,radioGroup:{win: boolean,draw: boolean,lose: boolean},checkboxGroup: {January: boolean,February: boolean}}> {
     constructor(props: any, state: any){
         super(props, state);
         this.state = {
@@ -19,6 +19,10 @@ interface AppProps {
                 win: false,
                 draw: false,
                 lose: false
+            },
+            checkboxGroup: {
+                January: false,
+                February: false
             }
         };
     }
@@ -48,8 +52,14 @@ interface AppProps {
     private handleRadio = (event:any) => {
         let stateGroup:any = {};
         stateGroup[event.target.value] = event.target.checked;
+        this.setState({radioGroup: stateGroup});
+    }
+
+    private handleCheckbox = (event:any) => {
+        let stateGroup:any = Object.assign(this.state.checkboxGroup);
+        stateGroup[event.target.value] = event.target.checked;
         console.log('stateGroup',stateGroup);
-        this.setState({radioGroup: stateGroup},() => {console.log(this.state);});
+        this.setState({checkboxGroup: stateGroup},() => {console.log(this.state);});
     }
 
 
@@ -121,6 +131,30 @@ interface AppProps {
                         />
                         <label htmlFor="radio3">
                             Поражение
+                        </label>
+                    </div>
+                    <div className="b-checkbox">
+                        <input
+                        id="checkbox1"
+                        className="checkbox"
+                        type="checkbox"
+                        value="January"
+                        checked={this.state.checkboxGroup.January}
+                        onChange={this.handleCheckbox}
+                    />
+                        <label htmlFor="checkbox1">
+                            Январь
+                        </label>
+                        <input
+                            id="checkbox2"
+                            className="checkbox"
+                            type="checkbox"
+                            value="February"
+                            checked={this.state.checkboxGroup.February}
+                            onChange={this.handleCheckbox}
+                        />
+                        <label htmlFor="checkbox2">
+                            Февраль
                         </label>
                     </div>
                     <div className="btn-row">

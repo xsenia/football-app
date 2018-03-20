@@ -4,17 +4,20 @@ body {
     linear-gradient(rgba(112, 166, 91,.5) 50%, transparent 50%);
     background-size:150px 150px;
 }
-
-.root{
-	font-family: Open Sans, sans-serif;
-}
-
 *{
     box-sizing: border-box;
 }
-
+.root{
+	font-family: Open Sans, sans-serif;
+}
 .app-wrap {
     padding: 20px;
+}
+
+/*---------------фильтр------------------*/
+h2 {
+    margin:0 0 20px;
+    color: #fff;
 }
 .filter-wrap {
     margin-bottom: 20px;
@@ -58,11 +61,11 @@ body {
     height: 50px;
     cursor: pointer;
 }
-
 .btn:hover {
     background-color: #609e33;
 }
 
+/*---------------Radiobutton--------------*/
 .radio {
     position: absolute;
     z-index: -1;
@@ -101,17 +104,57 @@ body {
 .radio:checked + label:after {
     opacity: 1;
 }
-.radio:focus + label:before {
-    /*box-shadow: 0 0 0 3px rgba(255,255,0,.7);*/
+
+/*------------------b-checkbox----------------------*/
+.b-checkbox {
+    padding: 20px 0 0 0;
+}
+.checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 10px 0 0 20px;
+}
+.checkbox + label {
+    position: relative;
+    padding: 0 18px 0 47px;
+    cursor: pointer;
+}
+.checkbox + label:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 36px;
+    height: 20px;
+    border-radius: 13px;
+    background: #CDD1DA;
+    box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+    transition: .2s;
+}
+.checkbox + label:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+    transition: .2s;
+}
+.checkbox:checked + label:before {
+    background: #9FD468;
+}
+.checkbox:checked + label:after {
+    left: 18px;
 }
 
 
-h2 {
-    margin:0 0 20px;
-    color: #fff;
-}
 
 
+/*-------------------------таблица-----------------------*/
 .table {
     border-collapse: collapse;
     background-color: #fff;
@@ -158,3 +201,7 @@ span.d {
 span.l {
     background-color: #e63131;
 }
+
+
+
+
