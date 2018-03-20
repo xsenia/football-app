@@ -15,6 +15,8 @@ export class App extends React.Component<{}, {table:any}> {
     }
 
 
+
+
     private sortByDecreasing = (sortKey:any) => {
         let tableSort:any = tableInfo.sort((objA: any, objB: any) => {
             if (objA[sortKey] < objB[sortKey]) return 1;

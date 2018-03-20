@@ -28,6 +28,11 @@ interface AppProps {
         };
     }
 
+    //менять стейт по изменнению value в search
+    private stateSearch = (arg:any) => {
+        this.setState({valueTeamsName: arg});
+    }
+
     private handleSubmit = (event:any) => {
         event.preventDefault();
         let valueSelect : string = this.state.valueSelect;
@@ -70,15 +75,11 @@ interface AppProps {
             <div className="filter-wrap">
                 <h2>{this.props.title}</h2>
                 <form onSubmit={this.handleSubmit}>
-                    <Search />
+
                     <div className="row">
                         <label>Название домашней команды</label>
-                        <input
-                            id="teamName"
-                            placeholder="Название домашней команды"
-                            type="text"
-                            value={this.state.valueTeamsName}
-                            onChange={this.handleChangeTeamsName}
+                        <Search
+                            stateSearch={this.stateSearch}
                         />
                     </div>
                     <div className="row">

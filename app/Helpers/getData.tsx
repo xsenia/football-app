@@ -23,7 +23,9 @@ export let leaguesList = leaguesClone.map((leagues:any) => {
 });
 leaguesList.unshift("Выберите лигу");
 
-
+export let homeTeams = dataClone.map((game:any) => {
+    return game.info.home;
+});
 
 const getLeagueId = (id:number) => {
     const leaguesClone = JSON.parse(JSON.stringify(leagues));
@@ -57,12 +59,9 @@ export const tableInfo = dataClone.map((game: any, i: number) =>
         )
     }
 );
-/*console.log(tableInfo);
-const compareAge = (objA:any, objB:any) => {
-    return objA.ligue - objB.ligue;
-}
-tableInfo.sort(this.compareAge);
-console.log(tableInfo);*/
+
+
+
 
 
 

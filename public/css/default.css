@@ -154,17 +154,19 @@ h2 {
 /*-------------------------строка поиска-------------------*/
 .b-search {
     position: relative;
+    max-width: 450px;
+    display: inline-block;
 }
 .b-search ul {
     position: absolute;
     z-index: 10;
     list-style: none;
     display: inline-block;
-    width: auto;
     text-align: left;
     padding: 0;
     max-height: 400px;
     overflow: scroll;
+    width: 250px;
 }
 
 .b-search ul li {
