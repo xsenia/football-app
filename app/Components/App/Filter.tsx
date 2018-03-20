@@ -2,6 +2,7 @@ import * as React from "react";
 import {leaguesList} from "../../Helpers/getData";
 import {FiltersHandler} from "../../Helpers/FiltersHandler";
 import {tableInfo} from "../../Helpers/getData";
+import {Search} from "./Search";
 
 interface AppProps {
     title?: string;
@@ -69,6 +70,7 @@ interface AppProps {
             <div className="filter-wrap">
                 <h2>{this.props.title}</h2>
                 <form onSubmit={this.handleSubmit}>
+                    <Search />
                     <div className="row">
                         <label>Название домашней команды</label>
                         <input

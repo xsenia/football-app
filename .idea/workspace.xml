@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df64643e-434a-4b54-8375-a5a9843121dd" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/Components/App/Search.tsx" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/app/Components/App/Filter.tsx" afterPath="$PROJECT_DIR$/app/Components/App/Filter.tsx" />
     </list>
@@ -17,34 +18,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.52538276">
+    <splitter split-orientation="horizontal" split-proportion="0.23336372">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
           <file leaf-file-name="TableRow.tsx" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/Components/App/TableRow.tsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="525">
-                  <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+                <state relative-caret-position="483">
+                  <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="57" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="getData.tsx" pinned="false" current-in-tab="false">
+          <file leaf-file-name="getData.tsx" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Helpers/getData.tsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="861">
-                  <caret line="41" column="22" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="22" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TableHeader.tsx" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Components/App/TableHeader.tsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="294">
-                  <caret line="14" column="36" lean-forward="false" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+                <state relative-caret-position="756">
+                  <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="22" />
                   <folding />
                 </state>
               </provider>
@@ -67,32 +58,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Filter.tsx" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/Components/App/Filter.tsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="82">
-                  <caret line="140" column="31" lean-forward="false" selection-start-line="140" selection-start-column="31" selection-end-line="140" selection-end-column="31" />
-                  <folding>
-                    <element signature="e#0#31#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Data.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Helpers/Data.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="6783">
-                  <caret line="323" column="5" lean-forward="false" selection-start-line="323" selection-start-column="5" selection-end-line="323" selection-end-column="7" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="FiltersHandler.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/Helpers/FiltersHandler.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1113">
+                <state relative-caret-position="859">
                   <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
                   <folding>
                     <marker date="1521396933726" expanded="true" signature="145:496" ph="/*...*/" />
@@ -104,15 +73,59 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="TableHeader.tsx" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Components/App/TableHeader.tsx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="105">
+                  <caret line="5" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="1" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Data.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Helpers/Data.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="9114">
+                  <caret line="323" column="5" lean-forward="false" selection-start-line="323" selection-start-column="5" selection-end-line="323" selection-end-column="7" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Filter.tsx" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Components/App/Filter.tsx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="273">
+                  <caret line="12" column="77" lean-forward="true" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="77" />
+                  <folding>
+                    <element signature="e#0#31#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="default.css" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Search.tsx" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/Components/App/Search.tsx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="273">
+                  <caret line="13" column="32" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="13" selection-end-column="32" />
+                  <folding>
+                    <element signature="e#0#31#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="default.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public/css/default.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="336">
-                  <caret line="156" column="2" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="59" />
+                <state relative-caret-position="691">
+                  <caret line="179" column="22" lean-forward="false" selection-start-line="179" selection-start-column="22" selection-end-line="179" selection-end-column="22" />
                   <folding />
                 </state>
               </provider>
@@ -121,7 +134,7 @@
           <file leaf-file-name="FiltersHandler.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/Helpers/FiltersHandler.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="523">
+                <state relative-caret-position="1050">
                   <caret line="44" column="39" lean-forward="false" selection-start-line="43" selection-start-column="12" selection-end-line="44" selection-end-column="39" />
                   <folding>
                     <marker date="1521396933726" expanded="true" signature="145:496" ph="/*...*/" />
@@ -171,6 +184,7 @@
         <option value="$PROJECT_DIR$/app/Components/App/App.tsx" />
         <option value="$PROJECT_DIR$/app/Components/App/Filter.tsx" />
         <option value="$PROJECT_DIR$/public/css/default.css" />
+        <option value="$PROJECT_DIR$/app/Components/App/Search.tsx" />
       </list>
     </option>
   </component>
@@ -303,19 +317,19 @@
       <workItem from="1521183459258" duration="10734000" />
       <workItem from="1521353212929" duration="21715000" />
       <workItem from="1521436548228" duration="7566000" />
-      <workItem from="1521545556650" duration="3910000" />
+      <workItem from="1521545556650" duration="7396000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146671000" />
+    <option name="totallyTimeSpent" value="150157000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.03046875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14296874" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -348,21 +362,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Components/App/App.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="33" column="25" lean-forward="false" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <marker date="1521462019427" expanded="true" signature="1287:1834" ph="..." />
-            <marker date="1521462019427" expanded="true" signature="1312:1456" ph="..." />
-            <marker date="1521462019427" expanded="true" signature="1498:1815" ph="..." />
-            <marker date="1521462019427" expanded="true" signature="1532:1684" ph="..." />
-            <marker date="1521462019427" expanded="true" signature="1715:1790" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Components/App/TableRow.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
@@ -731,47 +730,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Components/App/Table.tsx" />
     <entry file="file://$PROJECT_DIR$/app/Helpers/Filters.ts" />
-    <entry file="file://$PROJECT_DIR$/app/Components/App/TableRow.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Helpers/FiltersHandler.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="44" column="39" lean-forward="false" selection-start-line="43" selection-start-column="12" selection-end-line="44" selection-end-column="39" />
-          <folding>
-            <marker date="1521396933726" expanded="true" signature="145:496" ph="/*...*/" />
-            <marker date="1521396933726" expanded="true" signature="239:405" ph="/*...*/" />
-            <marker date="1521396933726" expanded="true" signature="329:405" ph="/*...*/" />
-            <marker date="1521396933726" expanded="true" signature="508:1750" ph="/*...*/" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Helpers/Data.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6783">
-          <caret line="323" column="5" lean-forward="false" selection-start-line="323" selection-start-column="5" selection-end-line="323" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Components/App/TableHeader.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="36" lean-forward="false" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        <state relative-caret-position="105">
+          <caret line="5" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Helpers/getData.tsx">
+    <entry file="file://$PROJECT_DIR$/app/Components/App/TableRow.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
-          <caret line="41" column="22" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="22" />
+        <state relative-caret-position="483">
+          <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="57" />
           <folding />
         </state>
       </provider>
@@ -793,19 +763,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Components/App/Filter.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="140" column="31" lean-forward="false" selection-start-line="140" selection-start-column="31" selection-end-line="140" selection-end-column="31" />
+        <state relative-caret-position="273">
+          <caret line="12" column="77" lean-forward="true" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="77" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Helpers/FiltersHandler.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="44" column="39" lean-forward="false" selection-start-line="43" selection-start-column="12" selection-end-line="44" selection-end-column="39" />
+          <folding>
+            <marker date="1521396933726" expanded="true" signature="145:496" ph="/*...*/" />
+            <marker date="1521396933726" expanded="true" signature="239:405" ph="/*...*/" />
+            <marker date="1521396933726" expanded="true" signature="329:405" ph="/*...*/" />
+            <marker date="1521396933726" expanded="true" signature="508:1750" ph="/*...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Helpers/Data.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9114">
+          <caret line="323" column="5" lean-forward="false" selection-start-line="323" selection-start-column="5" selection-end-line="323" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Helpers/getData.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/default.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="156" column="2" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="59" />
+        <state relative-caret-position="691">
+          <caret line="179" column="22" lean-forward="false" selection-start-line="179" selection-start-column="22" selection-end-line="179" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Components/App/Search.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="32" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="13" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
